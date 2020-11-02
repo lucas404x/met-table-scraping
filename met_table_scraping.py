@@ -14,7 +14,7 @@ html_content = html_content.find_all('tbody')[1]
 met_values = {}
 
 # extracting the values of html document
-for tr in html_content.find_all('tr'):
+for tr in html_content.find_all('tr')[1::]:
     td = tr.find_all('td')[1::]
     met_values[td[0].string] = td[1].string
 
